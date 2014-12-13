@@ -3603,8 +3603,18 @@ class WhatsProt
     {
         if($this->socket != null)
         {
-            socket_write($this->socket, $data, strlen($data));
+            if(@socket_write($this->socket, $data, strlen($data)) === FALSE) {
+                echo "dead socket!\n";
+                $this->reconnect();
+            }
         }
+    }
+
+    protected function reconnect() {
+        echo "reconnecting...\n";
+        $this->disconnect();
+        $this->connect();
+        $this->doLogin();
     }
 
     /**

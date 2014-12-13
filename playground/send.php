@@ -18,9 +18,9 @@ echo "[*]connected to WhatsApp\n\n";
 //$w->sendGetServerProperties();
 //$w->sendClientConfig();
 
-$target = WAAccountData::$phonebook["MEKIT-CHAT"];
+$target = WAAccountData::$phonebook["ERIKA"];
 
-for ($i=1; $i<=5; $i++) {
+for ($i=1; $i<=100; $i++) {
     $message = 'PHP TEST #'. $i . " - testing php API";
     $w->sendMessage($target , $message);
 }
