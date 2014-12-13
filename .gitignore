@@ -9,3 +9,4 @@ composer.phar
 .directory
 Thumbs.db
 *.dat
+playground/WAAccountData.php

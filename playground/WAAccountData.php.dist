@@ -1,0 +1,16 @@
+<?php
+class WAAccountData {
+    public static $d = [
+        "username" => "",
+        "password" => "=",
+        "identity" => "",
+        "nickname" => "",
+        "debug" => true
+    ];
+
+    public static $phonebook = [
+        "contact1" => '3912345678',
+        "contact2" => '3912345677',
+        "contact3" => '3912345676'
+    ];
+}
