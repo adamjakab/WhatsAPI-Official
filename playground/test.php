@@ -13,15 +13,16 @@ $w = new WhatsProt(
 );
 $w->connect();
 $w->loginWithPassword(WAAccountData::$d["password"]);
-echo "[*]connected to WhatsApp\n\n";
+echo "[*]connected\n\n";
 
 //$w->sendGetServerProperties();
 //$w->sendClientConfig();
 
-$target = WAAccountData::$phonebook["MEKIT-CHAT"];
+$w->sendPing();
+$w->pollMessage();
 
-for ($i=1; $i<=5; $i++) {
-    $message = 'PHP TEST #'. $i . " - testing php API";
-    $w->sendMessage($target , $message);
-}
+$w->sendGetGroups();
+$w->pollMessage();
+$w->pollMessage();
+
 $w->disconnect();
