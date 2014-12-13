@@ -6,4 +6,5 @@ composer.phar
 .env.*.php
 .env.php
 .DS_Store
+.directory
 Thumbs.db
