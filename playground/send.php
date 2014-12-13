@@ -20,7 +20,7 @@ echo "[*]connected to WhatsApp\n\n";
 
 $target = WAAccountData::$phonebook["ERIKA"];
 
-for ($i=1; $i<=100; $i++) {
+for ($i=1; $i<=5; $i++) {
     $message = 'PHP TEST #'. $i . " - testing php API";
     $w->sendMessage($target , $message);
 }
